@@ -9,8 +9,7 @@ function __waveforms(){ static __instance = new (function() constructor
     //Tau my beloved
     global.__2pi = 2 * pi;
 
-    //Waveforms
-    
+    //Waveforms    
     __triangle = {
         toString: function()       { return "waveform triangle"; }, 
         toValue:  function(_p, _f) { return (-2 / _f) * (_p - _f / 2 * floor((2 * _p)/ _f + 0.5)) * power(-1.0, floor((2 * _p)/ _f + 0.5)); } 
