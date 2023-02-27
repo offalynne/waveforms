@@ -4,6 +4,7 @@ function wave(_phase, _frequency, _waveform = WAVEFORM_FLAT)
     return _waveform.toValue(_phase, _frequency);
 }
 
+//Library singleton
 function __waveforms(){ static __instance = new (function() constructor 
 {
     //Tau my beloved
