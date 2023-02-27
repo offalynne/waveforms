@@ -13,12 +13,12 @@ function __waveforms(){ static __instance = new (function() constructor
     //Waveforms    
     __triangle = {
         toString: function()       { return "waveform triangle"; }, 
-        toValue:  function(_p, _f) { return (_p % _f + _f) % _f - (_p < 0 || _p / _f - floor(_p / _f + 0.5) < 0.5); } 
+        toValue:  function(_p, _f) { return (-2 / _f) * (_p - _f / 2 * floor((2 * _p)/ _f + 0.5)) * power(-1.0, floor((2 * _p)/ _f + 0.5)); } 
     };
     
     __sawtooth = { 
         toString: function()       { return "waveform sawtooth"; }, 
-        toValue:  function(_p, _f) { return -floor((_p - _f / 2) / _f); } 
+        toValue:  function(_p, _f) { return -(_p / _f - floor(0.5 + _p / _f)); } 
     };
     
     __square = { 
