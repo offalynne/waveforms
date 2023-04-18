@@ -8,7 +8,7 @@ function wave(_phase, _frequency, _waveform = WAVEFORM_FLAT)
 function __waveforms(){ static __instance = new (function() constructor 
 {
     //Tau my beloved
-    global.__2pi = 2 * pi;
+    __2pi = 2 * pi;
 
     //Waveforms    
     __triangle = {
@@ -28,7 +28,7 @@ function __waveforms(){ static __instance = new (function() constructor
     
     __sine = { 
         toString: function()       { return "waveform sine"; }, 
-        toValue:  function(_p, _f) { return sin(_p * global.__2pi / _f) / -2; } 
+        toValue:  function(_p, _f) { return sin(_p * __2pi / _f) / -2; } 
     };
     
     __flat = { 
