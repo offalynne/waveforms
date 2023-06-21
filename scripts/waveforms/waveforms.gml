@@ -12,27 +12,27 @@ function __waveforms(){ static __instance = new (function() constructor
 
     //Waveforms    
     __triangle = {
-        toString: function()       { return "waveform triangle"; }, 
+        toString: function() { return "waveform triangle"; }, 
         toValue:  function(_p, _f) { return (-2 / _f) * (_p - _f / 2 * floor((2 * _p)/ _f + 0.5)) * power(-1.0, floor((2 * _p)/ _f + 0.5)); } 
     };
     
     __sawtooth = { 
-        toString: function()       { return "waveform sawtooth"; }, 
+        toString: function() { return "waveform sawtooth"; }, 
         toValue:  function(_p, _f) { return -(_p / _f - floor(0.5 + _p / _f)); } 
     };
     
     __square = { 
-        toString: function()       { return "waveform square"; }, 
+        toString: function() { return "waveform square"; }, 
         toValue:  function(_p, _f) { return ((_p mod _f) < (_f / 2))? -0.5 : 0.5; } 
     };
     
     __sine = { 
-        toString: function()       { return "waveform sine"; }, 
+        toString: function() { return "waveform sine"; }, 
         toValue:  function(_p, _f) { return sin(_p * __2pi / _f) / -2; } 
     };
     
     __flat = { 
-        toString: function()       { return "waveform flat"; }, 
+        toString: function() { return "waveform flat"; }, 
         toValue:  function(_p, _f) { return 0.0 } 
     };
     
