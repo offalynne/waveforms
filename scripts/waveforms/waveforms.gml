@@ -1,12 +1,10 @@
-function wave(_phase, _frequency, _waveform = WAVEFORM_FLAT)
-{
+function wave(_phase, _frequency, _waveform = WAVEFORM_FLAT){
     if (_frequency == 0.0) return 0.0;
     return __waveforms()[$ _waveform](_phase, _frequency);
 }
 
 //Library singleton
-function __waveforms(){ static __instance = new (function() constructor 
-{
+function __waveforms(){ static __instance = new (function() constructor {
     //Factory
     var _set = function(_name, _function, _struct = self){ variable_struct_set(_struct, _name, _function) };
 
