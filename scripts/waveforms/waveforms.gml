@@ -9,7 +9,7 @@ function __waveforms(){ static __instance = new (function() constructor {
 
     //Waveforms    
     _set(WAVEFORM_TRIANGLE, function(_p, _f) { return (-2/_f) * (_p - _f/2*floor((2*_p)/_f + 0.5)) * power(-1.0, floor((2*_p)/_f + 0.5)) });
-    _set(WAVEFORM_SAWTOOTH, function(_p, _f) { return -(_p/_f - floor(0.5 + _p/_f)); });
+    _set(WAVEFORM_SAWTOOTH, function(_p, _f) { return -(_p/_f - floor(0.5 + _p/_f)) });
     _set(WAVEFORM_SQUARE,   function(_p, _f) { return ((_p mod _f) < (_f/2))? -0.5 : 0.5 });
     _set(WAVEFORM_SINE,     function(_p, _f) { static __2pi = 2 * pi; return sin(_p*__2pi/_f)/-2 });
     _set(WAVEFORM_FLAT,     function(_p, _f) { return 0.0 });
