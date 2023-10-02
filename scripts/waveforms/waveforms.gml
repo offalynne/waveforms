@@ -5,8 +5,6 @@ function wave(_phase, _frequency, _waveform = WAVEFORM_FLAT){
 
 //Library singleton
 function __waveforms(){ static __instance = new (function() constructor {
-    
-    //Factory
     var _set = function(_name, _function, _struct = self){ variable_struct_set(_struct, _name, _function) };
 
     //Waveforms    
