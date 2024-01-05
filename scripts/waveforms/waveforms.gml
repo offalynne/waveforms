@@ -4,7 +4,7 @@ function wave(_phase, _frequency, _waveform = WAVEFORM_FLAT) { return __waveform
 function __waveforms(){ static __instance = new (function() constructor
 {
     __2pi = 2*pi;
-    var _set = function(_name, _function, _struct = self){ variable_struct_set(_struct, _name, _function) };
+    var _set = function(_name, _function){ variable_struct_set(_struct, _name, _function) };
 
     //Waveforms    
     _set(WAVEFORM_TRIANGLE, function(_p, _f) { return (-2/_f)*(_p - _f/2*floor((2*_p)/_f + 0.5))*power(-1.0, floor((2*_p)/_f + 0.5)) });
